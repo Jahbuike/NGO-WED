@@ -1,0 +1,57 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+    <title>{{ title }} | Josh Foundation</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">JOSH FOUNDATION</div>
+        <a href="{% url 'home' %}">← Back to Home</a>
+    </nav>
+
+    <div class="detail-container" style="padding: 100px 10%;">
+        <h1>{{ title }}</h1>
+        <img src="{{ image_url }}" style="width:100%; border-radius: 15px; height: 400px; object-fit: cover;">
+        
+        <div class="content" style="margin-top: 30px;">
+            <h2>About this Project</h2>
+            <p>{{ description }}</p>
+            
+            <h3>Our Impact</h3>
+            <p>{{ impact }}</p>
+        </div>
+    </div>
+</body>
+</html>
+ 
+ 
+ 
+ <!-- {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+    <title>Project Details | Josh Foundation</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">JOSH FOUNDATION</div>
+        <a href="{% url 'home' %}">← Back to Home</a>
+    </nav>
+
+    <div class="detail-container" style="padding: 100px 10%;">
+        <h1>Detailed Project Information</h1>
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1000" style="width:100%; border-radius: 15px;">
+        
+        <div class="content" style="margin-top: 30px;">
+            <h2>Impact Report</h2>
+            <p>This project has successfully provided healthcare to over 2,000 children in the local region. We have installed modern equipment and hired 10 full-time nurses.</p>
+            
+            <h3>Future Goals</h3>
+            <p>Our next step is to build a dedicated maternity wing by the end of 2026.</p>
+        </div>
+    </div>
+</body>
+</html> -->

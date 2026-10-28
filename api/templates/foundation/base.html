@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh Foundation | {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'api/css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">JOSH FOUNDATION</div>
+        <ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'impact' %}">Impact</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'donate' %}" class="btn-donate">Donate</a></li>
+</ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer style="background: #1a5e5e; color: white; padding: 40px 10%; text-align: center; margin-top: 50px;">
+        <p>&copy; 2026 Josh Foundation. Developing Rural Environments.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Josh Foundation Script Loaded!");
+            
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY < 50) {
+                    nav.style.backgroundColor = '#fff'; // Use backgroundColor
+                    nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                } else {
+                    nav.style.backgroundColor = 'transparent'; // Reset when at top
+                    nav.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

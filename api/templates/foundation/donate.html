@@ -1,0 +1,21 @@
+{% extends 'foundation/base.html' %}
+{% block title %}Donate{% endblock %}
+
+{% block content %}
+<section style="padding: 100px 10%; max-width: 800px; margin: 0 auto;">
+    <h2 style="text-align: center; color: #1a5e5e;">Support Our Mission</h2>
+    <p style="text-align: center;">Your contribution directly funds hospitals and amenities in rural communities.</p>
+    
+    <form style="background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); margin-top: 30px;">
+        <div style="margin-bottom: 20px;">
+            <label>Select Amount</label><br>
+            <button type="button" class="amt-btn">$10</button>
+            <button type="button" class="amt-btn">$50</button>
+            <button type="button" class="amt-btn">$100</button>
+        </div>
+        <input type="text" placeholder="Full Name" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd;">
+        <input type="email" placeholder="Email Address" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd;">
+        <button type="submit" style="width: 100%; background: #e67e22; color: white; padding: 15px; border: none; font-weight: bold; cursor: pointer;">Complete Donation</button>
+    </form>
+</section>
+{% endblock %}
